@@ -1,7 +1,7 @@
 {%set name = "fake-factory" %}
-{%set version = "0.5.8" %}
+{%set version = "0.5.2" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "d004b53e9e5340c0879eb59941d6e0edae3a0a840c28b5cc84fd66b2732b218f" %}
+{%set hash_val = "90f507891ad1073e08cf6908eb51d5e1debc3c5a5d554427e8c3fbf73cdf12ee" %}
 
 package:
   name: {{ name }}
