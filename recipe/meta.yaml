@@ -212,8 +212,8 @@ test:
     - faker.utils
   
   commands:
-    - faker --help  # [not linux]
-    - PYTHONIOENCODING=utf8 faker --help  # [linux]
+    - faker --help  # [osx]
+    - PYTHONIOENCODING=utf8 faker --help  # [linux or win]
 
 about:
   home: http://github.com/joke2k/faker
