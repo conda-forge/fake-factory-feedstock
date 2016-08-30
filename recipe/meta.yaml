@@ -213,11 +213,14 @@ test:
   
   commands:
     - faker --help  # [osx]
-    - PYTHONIOENCODING=utf8 faker --help  # [linux or win]
+    - PYTHONIOENCODING=utf8 faker --help  # [linux]
+    - SET PYTHONIOENCODING=utf8 faker --help  # [win]
 
 about:
   home: http://github.com/joke2k/faker
   license: MIT
+  license_file: LICENSE.txt
+  license_family: MIT
   summary: 'Faker is a Python package that generates fake data for you.'
 
 extra:
