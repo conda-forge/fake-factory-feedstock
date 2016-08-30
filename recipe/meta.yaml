@@ -214,7 +214,7 @@ test:
   commands:
     - faker --help  # [osx]
     - PYTHONIOENCODING=utf8 faker --help  # [linux]
-    - SET PYTHONIOENCODING=utf8 faker --help  # [win]
+    - SET "PYTHONIOENCODING=utf8" & faker --help  # [win]
 
 about:
   home: http://github.com/joke2k/faker
