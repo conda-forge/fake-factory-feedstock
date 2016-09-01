@@ -1,7 +1,7 @@
 {%set name = "fake-factory" %}
-{%set version = "0.5.8" %}
+{%set version = "0.5.2" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "d004b53e9e5340c0879eb59941d6e0edae3a0a840c28b5cc84fd66b2732b218f" %}
+{%set hash_val = "37b121776d0ee180440fb3133baff8c97dbaaafdb3fc9a659ac6db498abcbc27" %}
 
 package:
   name: {{ name }}
@@ -44,7 +44,6 @@ test:
     - faker.providers.address.de_DE
     - faker.providers.address.el_GR
     - faker.providers.address.en
-    - faker.providers.address.en_AU
     - faker.providers.address.en_CA
     - faker.providers.address.en_GB
     - faker.providers.address.en_US
@@ -55,11 +54,9 @@ test:
     - faker.providers.address.fi_FI
     - faker.providers.address.fr_FR
     - faker.providers.address.hi_IN
-    - faker.providers.address.hr_HR
     - faker.providers.address.it_IT
     - faker.providers.address.ja_JP
     - faker.providers.address.ko_KR
-    - faker.providers.address.ne_NP
     - faker.providers.address.nl_NL
     - faker.providers.address.no_NO
     - faker.providers.address.pl_PL
@@ -80,10 +77,8 @@ test:
     - faker.providers.company.de_DE
     - faker.providers.company.en_US
     - faker.providers.company.es_MX
-    - faker.providers.company.fa_IR
     - faker.providers.company.fi_FI
     - faker.providers.company.fr_FR
-    - faker.providers.company.hr_HR
     - faker.providers.company.it_IT
     - faker.providers.company.ja_JP
     - faker.providers.company.ko_KR
@@ -105,18 +100,13 @@ test:
     - faker.providers.file.en_US
     - faker.providers.internet
     - faker.providers.internet.bg_BG
-    - faker.providers.internet.bs_BA
     - faker.providers.internet.cs_CZ
     - faker.providers.internet.de_AT
     - faker.providers.internet.de_DE
     - faker.providers.internet.el_GR
-    - faker.providers.internet.en_AU
     - faker.providers.internet.en_US
-    - faker.providers.internet.fa_IR
     - faker.providers.internet.fi_FI
     - faker.providers.internet.fr_FR
-    - faker.providers.internet.hr_HR
-    - faker.providers.internet.ja_JP
     - faker.providers.internet.ko_KR
     - faker.providers.internet.no_NO
     - faker.providers.internet.pt_BR
@@ -126,12 +116,9 @@ test:
     - faker.providers.internet.sv_SE
     - faker.providers.job
     - faker.providers.job.en_US
-    - faker.providers.job.fa_IR
-    - faker.providers.job.fr_FR
     - faker.providers.job.pl_PL
     - faker.providers.job.ru_RU
     - faker.providers.job.uk_UA
-    - faker.providers.job.zh_TW
     - faker.providers.lorem
     - faker.providers.lorem.el_GR
     - faker.providers.lorem.la
@@ -153,7 +140,6 @@ test:
     - faker.providers.person.fi_FI
     - faker.providers.person.fr_FR
     - faker.providers.person.hi_IN
-    - faker.providers.person.hr_HR
     - faker.providers.person.it_IT
     - faker.providers.person.ja_JP
     - faker.providers.person.ko_KR
@@ -174,12 +160,10 @@ test:
     - faker.providers.person.zh_TW
     - faker.providers.phone_number
     - faker.providers.phone_number.bg_BG
-    - faker.providers.phone_number.bs_BA
     - faker.providers.phone_number.cs_CZ
     - faker.providers.phone_number.de_DE
     - faker.providers.phone_number.dk_DK
     - faker.providers.phone_number.el_GR
-    - faker.providers.phone_number.en_AU
     - faker.providers.phone_number.en_CA
     - faker.providers.phone_number.en_GB
     - faker.providers.phone_number.en_US
@@ -189,7 +173,6 @@ test:
     - faker.providers.phone_number.fi_FI
     - faker.providers.phone_number.fr_FR
     - faker.providers.phone_number.hi_IN
-    - faker.providers.phone_number.hr_HR
     - faker.providers.phone_number.it_IT
     - faker.providers.phone_number.ja_JP
     - faker.providers.phone_number.ko_KR
@@ -220,23 +203,24 @@ test:
     - faker.providers.ssn.it_IT
     - faker.providers.ssn.ko_KR
     - faker.providers.ssn.nl_NL
-    - faker.providers.ssn.pt_BR
     - faker.providers.ssn.sv_SE
     - faker.providers.ssn.uk_UA
-    - faker.providers.ssn.zh_CN
     - faker.providers.ssn.zh_TW
     - faker.providers.user_agent
     - faker.providers.user_agent.en_US
     - faker.shims
     - faker.utils
-
+  
   commands:
-    - faker --help  # [not linux]
+    - faker --help  # [osx]
     - PYTHONIOENCODING=utf8 faker --help  # [linux]
+    - SET "PYTHONIOENCODING=utf8" & faker --help  # [win]
 
 about:
   home: http://github.com/joke2k/faker
   license: MIT
+  license_file: LICENSE.txt
+  license_family: MIT
   summary: 'Faker is a Python package that generates fake data for you.'
 
 extra:
