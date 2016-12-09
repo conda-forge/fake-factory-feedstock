@@ -11,6 +11,18 @@ Summary: Faker is a Python package that generates fake data for you.
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/fake-factory-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/fake-factory-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/fake-factory-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/fake-factory-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/fake-factory-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/fake-factory-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/fake-factory/badges/version.svg)](https://anaconda.org/conda-forge/fake-factory)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/fake-factory/badges/downloads.svg)](https://anaconda.org/conda-forge/fake-factory)
+
 Installing fake-factory
 =======================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `fake-factory` available on your p
 ```
 conda search fake-factory --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/fake-factory-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/fake-factory-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/fake-factory-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/fake-factory-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/fake-factory-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/fake-factory-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/fake-factory/badges/version.svg)](https://anaconda.org/conda-forge/fake-factory)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/fake-factory/badges/downloads.svg)](https://anaconda.org/conda-forge/fake-factory)
 
 
 Updating fake-factory-feedstock
