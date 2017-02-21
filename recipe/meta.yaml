@@ -1,22 +1,24 @@
 {%set name = "fake-factory" %}
-{%set version = "0.5.2" %}
+{%set version = "9999.9.9" %}
+{%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "37b121776d0ee180440fb3133baff8c97dbaaafdb3fc9a659ac6db498abcbc27" %}
+{%set hash_val = "f5bd18deb22ad8cb4402513c025877bc6b50de58902d686b6b21ba8981dce260" %}
+{%set build_num = "0" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
   entry_points:
     - faker=faker.cli:execute_from_command_line
 
-  number: 0
+  number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -217,11 +219,12 @@ test:
     - SET "PYTHONIOENCODING=utf8" & faker --help  # [win]
 
 about:
-  home: http://github.com/joke2k/faker
+  home: https://github.com/joke2k/faker
   license: MIT
   license_file: LICENSE.txt
   license_family: MIT
   summary: 'Faker is a Python package that generates fake data for you.'
+  dev_url: https://github.com/joke2k/faker
 
 extra:
   recipe-maintainers:
