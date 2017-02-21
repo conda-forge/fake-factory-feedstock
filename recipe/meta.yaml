@@ -210,7 +210,6 @@ test:
     - faker.providers.ssn.zh_TW
     - faker.providers.user_agent
     - faker.providers.user_agent.en_US
-    - faker.shims
     - faker.utils
   
   commands:
