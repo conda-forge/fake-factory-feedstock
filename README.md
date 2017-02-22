@@ -1,7 +1,7 @@
 About fake-factory
 ==================
 
-Home: http://github.com/joke2k/faker
+Home: https://github.com/joke2k/faker
 
 Package license: MIT
 
