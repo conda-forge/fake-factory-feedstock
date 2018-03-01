@@ -1,8 +1,8 @@
 {% set name = "fake-factory" %}
-{% set version = "0.7.4" %}
+{% set version = "9999.9.9" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "ae5caf54c5f1a77c2130b2bb05cdb0d11add8249474b4f757c7065c2ef421868" %}
+{% set hash = "f5bd18deb22ad8cb4402513c025877bc6b50de58902d686b6b21ba8981dce260" %}
 {% set build = 1 %}
 
 package:
@@ -18,7 +18,7 @@ build:
   entry_points:
     - faker=faker.cli:execute_from_command_line
 
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
