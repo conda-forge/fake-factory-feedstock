@@ -1,9 +1,8 @@
 {% set name = "fake-factory" %}
 {% set version = "0.7.4" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
 {% set hash = "ae5caf54c5f1a77c2130b2bb05cdb0d11add8249474b4f757c7065c2ef421868" %}
-{% set build = 1001 %}
+{% set build = 1002 %}
 
 package:
   name: {{ name }}
@@ -12,7 +11,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle}}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   entry_points:
