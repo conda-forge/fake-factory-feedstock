@@ -2,7 +2,7 @@
 {% set version = "0.7.4" %}
 {% set bundle = "tar.gz" %}
 {% set hash = "ae5caf54c5f1a77c2130b2bb05cdb0d11add8249474b4f757c7065c2ef421868" %}
-{% set build = 1003 %}
+{% set build = 1004 %}
 
 package:
   name: {{ name }}
@@ -21,7 +21,7 @@ build:
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
     - python-dateutil >=2.4
