@@ -1,40 +1,33 @@
 {% set name = "fake-factory" %}
 {% set version = "0.7.4" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "ae5caf54c5f1a77c2130b2bb05cdb0d11add8249474b4f757c7065c2ef421868" %}
-{% set build = 1003 %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  sha256: {{ hash }}
+  sha256: ae5caf54c5f1a77c2130b2bb05cdb0d11add8249474b4f757c7065c2ef421868
 
 build:
   entry_points:
     - faker=faker.cli:execute_from_command_line
 
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 1005
+  script: python -m pip install . -vvv
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
     - python-dateutil >=2.4
     - six
-    - importlib  # [py26]
-    - ipaddress  # [py26 or py27]
 
   run:
     - python
     - python-dateutil >=2.4
     - six
-    - importlib  # [py26]
-    - ipaddress  # [py26 or py27]
 
 test:
   imports:
