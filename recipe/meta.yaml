@@ -7,14 +7,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   sha256: ae5caf54c5f1a77c2130b2bb05cdb0d11add8249474b4f757c7065c2ef421868
 
 build:
   entry_points:
     - faker=faker.cli:execute_from_command_line
 
-  number: 1008
+  number: 1009
   script: python -m pip install . -vvv
 
 requirements:
@@ -23,6 +23,7 @@ requirements:
     - pip
     - python-dateutil >=2.4
     - six
+    - setuptools
 
   run:
     - python
